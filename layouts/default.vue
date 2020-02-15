@@ -1,0 +1,25 @@
+<template>
+  <div>
+    <nuxt />
+  </div>
+</template>
+
+<style lang="scss">
+html {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  color: $text-black;
+}
+
+body {
+  margin: 0;
+}
+a {
+  color: $link;
+}
+</style>

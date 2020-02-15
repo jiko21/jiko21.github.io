@@ -1,0 +1,50 @@
+{
+  "name": "portofolio",
+  "version": "1.0.0",
+  "description": "My portofolio",
+  "author": "jiko21",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "deploy": "push-dir --dir=dist --branch=master --cleanup",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@nuxtjs/device": "^1.2.7",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "json-loader": "^0.5.7",
+    "nuxt": "^2.0.0",
+    "vue-carousel": "^0.18.0",
+    "yaml-loader": "^0.5.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/stylelint-module": "^3.1.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^2.6.0",
+    "lint-staged": "^8.2.1",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.16.4",
+    "push-dir": "^0.4.1",
+    "sass-loader": "^8.0.2",
+    "stylelint": "^10.1.0",
+    "stylelint-scss": "^3.14.2"
+  }
+}
