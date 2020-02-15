@@ -72,6 +72,8 @@
 </template>
 
 <script>
+import Carousel from 'vue-carousel/src/Carousel.vue'
+import Slide from 'vue-carousel/src/Slide.vue'
 import HeadImage from '../components/HeadImage.vue'
 import ContentBlock from '../components/ContentBlock'
 import ImageLink from '../components/ImageLink'
@@ -85,7 +87,9 @@ export default {
     ContentBlock,
     HeadImage,
     ImageCard,
-    ImageLink
+    ImageLink,
+    Carousel,
+    Slide
   },
   data() {
     return {
