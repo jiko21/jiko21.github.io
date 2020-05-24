@@ -7,6 +7,15 @@
 <script>
 export default {
   name: 'ImageLink',
-  props: ['src', 'link']
-}
+  props: {
+    src: {
+      type: String,
+      required: true,
+    },
+    link: {
+      type: String,
+      required: true,
+    },
+  },
+};
 </script>

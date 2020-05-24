@@ -11,8 +11,8 @@
 
 <script>
 export default {
-  name: 'HeadImage'
-}
+  name: 'HeadImage',
+};
 </script>
 <style lang="scss" scoped>
 .head-img {

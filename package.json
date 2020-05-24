@@ -10,7 +10,7 @@
     "start": "nuxt start",
     "deploy": "push-dir --dir=dist --branch=master --cleanup",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "lint": "eslint --ext .js,.vue . --fix"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint"

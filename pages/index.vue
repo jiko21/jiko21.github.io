@@ -72,14 +72,14 @@
 </template>
 
 <script>
-import Carousel from 'vue-carousel/src/Carousel.vue'
-import Slide from 'vue-carousel/src/Slide.vue'
-import HeadImage from '../components/HeadImage.vue'
-import ContentBlock from '../components/ContentBlock'
-import ImageLink from '../components/ImageLink'
-import ImageCard from '../components/ImageCard'
-import { items } from '../contents/contents'
-import MyFooter from '../components/MyFooter'
+import Carousel from 'vue-carousel/src/Carousel.vue';
+import Slide from 'vue-carousel/src/Slide.vue';
+import HeadImage from '../components/HeadImage.vue';
+import ContentBlock from '../components/ContentBlock';
+import ImageLink from '../components/ImageLink';
+import ImageCard from '../components/ImageCard';
+import { items } from '../contents/contents';
+import MyFooter from '../components/MyFooter';
 
 export default {
   components: {
@@ -89,21 +89,20 @@ export default {
     ImageCard,
     ImageLink,
     Carousel,
-    Slide
+    Slide,
   },
   data() {
     return {
       items,
-      count: 3
-    }
+      count: 3,
+    };
   },
   created() {
     if (this.$device.isMobile) {
-      this.count = 1
+      this.count = 1;
     }
-    console.log(items.works)
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>

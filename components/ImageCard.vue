@@ -1,6 +1,6 @@
 <template>
   <div class="image-card">
-    <div class="content" :style="`background-image: url(/${img})`"></div>
+    <div :style="`background-image: url(/${img})`" class="content"></div>
     <div class="content">
       <h3>{{ title }}</h3>
       <p>{{ content }}</p>
@@ -15,22 +15,22 @@ export default {
   props: {
     img: {
       type: String,
-      required: true
+      required: true,
     },
     title: {
       type: String,
-      required: true
+      required: true,
     },
     content: {
       type: String,
-      required: true
+      required: true,
     },
     link: {
       type: String,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
