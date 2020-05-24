@@ -10,8 +10,13 @@
 <script>
 export default {
   name: 'ContentBlock',
-  props: ['title']
-}
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
