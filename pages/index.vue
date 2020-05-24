@@ -3,13 +3,13 @@
     <div>
       <head-image />
       <content-block :title="items['about'].title">
-        <div class="text-image">
+        <div class="card text-image">
           <p v-html="items['about'].detail"></p>
           <img src="/me.jpg" />
         </div>
       </content-block>
       <content-block :title="items['profile'].title">
-        <ul>
+        <ul class="card">
           <li v-for="(item, i) in items['profile'].detail" :key="i">
             <span>{{ i }}</span>
             : {{ item }}
@@ -18,7 +18,7 @@
       </content-block>
       <content-block :title="items['skills'].title">
         <div class="skill-box">
-          <div>
+          <div class="card">
             <h3>Language</h3>
             <ul>
               <li v-for="(item, i) in items['skills'].detail['lang']" :key="i">
@@ -27,7 +27,7 @@
               </li>
             </ul>
           </div>
-          <div>
+          <div class="card">
             <h3>Framework</h3>
             <ul>
               <li
@@ -54,13 +54,22 @@
         </carousel>
       </content-block>
       <content-block :title="items['slides'].title">
-        <p v-html="items['slides'].detail"></p>
+        <p v-html="items['slides'].detail" class="card"></p>
       </content-block>
       <content-block title="SNS/Blog">
         <div class="link-box">
-          <image-link src="/github.png" link="http://github.com/jiko21" />
-          <image-link src="/twitter.svg" link="https://twitter.com/jiko_21" />
           <image-link
+            class="card"
+            src="/github.png"
+            link="http://github.com/jiko21"
+          />
+          <image-link
+            class="card"
+            src="/twitter.svg"
+            link="https://twitter.com/jiko_21"
+          />
+          <image-link
+            class="card"
             src="/blog.svg"
             link="https://jiko-daiki.sakura.ne.jp/wordpress"
           />
@@ -119,12 +128,13 @@ export default {
   display: flex;
   align-items: center;
   img {
-    width: 40%;
+    margin-left: auto;
     max-width: 200px;
-    margin-right: auto;
+    width: 40%;
   }
   p {
     float: left;
+    width: 60%;
     vertical-align: center;
   }
 }
@@ -134,6 +144,7 @@ export default {
   flex-wrap: wrap;
   div {
     flex: 1;
+    margin: 0 10px;
   }
 }
 
@@ -141,6 +152,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 20px;
   * {
     margin: 0 5%;
   }

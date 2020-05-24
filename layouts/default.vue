@@ -18,6 +18,7 @@ html {
 
 body {
   margin: 0;
+  background-color: $background;
 }
 a {
   color: $link;

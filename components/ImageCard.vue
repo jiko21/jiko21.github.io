@@ -1,6 +1,9 @@
 <template>
-  <div class="image-card">
-    <div :style="`background-image: url(/${img})`" class="content"></div>
+  <div class="card image-card">
+    <div
+      :style="`background-image: url(/${img})`"
+      class="content div-img"
+    ></div>
     <div class="content">
       <h3>{{ title }}</h3>
       <p>{{ content }}</p>
@@ -37,9 +40,7 @@ export default {
 $radius-size: 10px;
 
 .image-card {
-  border-radius: $radius-size;
-  border: 0.5px solid $text-black;
-  height: 300px;
+  height: 400px;
   margin: 10%;
   h2 {
     margin: 0;
@@ -49,13 +50,15 @@ $radius-size: 10px;
     width: 100%;
   }
   .content {
-    height: 50%;
     border-radius: $radius-size $radius-size 0 0;
     background-size: cover;
     padding: 0 5%;
     h3 {
       text-align: center;
     }
+  }
+  .div-img {
+    height: 50%;
   }
 }
 </style>

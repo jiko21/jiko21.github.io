@@ -43,7 +43,7 @@ export default {
    */
   modules: ['@nuxtjs/pwa', '@nuxtjs/style-resources', '@nuxtjs/device'],
   styleResources: {
-    scss: ['~/assets/sass/_variable.scss']
+    scss: ['~/assets/sass/_variable.scss', '~/assets/sass/_common.scss']
   },
   /*
    ** Build configuration
