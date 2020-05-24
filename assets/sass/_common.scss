@@ -1,0 +1,6 @@
+.card {
+  border-radius: 10px;
+  background: $background;
+  box-shadow: 5px 5px 10px hsl(225, 4%, 79%), -5px -5px 10px $background;
+  padding: 20px;
+}
