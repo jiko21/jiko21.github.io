@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div>
+    <div class="wrap">
       <head-image />
       <content-block :title="items['about'].title">
         <div class="card text-image">
@@ -122,6 +122,9 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  .wrap {
+    width: 100%;
+  }
 }
 
 .text-image {

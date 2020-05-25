@@ -2,7 +2,7 @@
   <div class="card image-card">
     <div
       :style="`background-image: url(/${img})`"
-      class="content div-img"
+      class="card content div-img"
     ></div>
     <div class="content">
       <h3>{{ title }}</h3>
@@ -50,7 +50,7 @@ $radius-size: 10px;
     width: 100%;
   }
   .content {
-    border-radius: $radius-size $radius-size 0 0;
+    border-radius: $radius-size;
     background-size: cover;
     padding: 0 5%;
     h3 {
