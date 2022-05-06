@@ -8,15 +8,16 @@
 
 		
 
-		<link rel="modulepreload" href="/_app/start-db54a4c1.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-303815d4.js">
-		<link rel="modulepreload" href="/_app/layout.svelte-eb479a5e.js">
-		<link rel="modulepreload" href="/_app/pages/index.svelte-fb69c299.js">
+		<link rel="modulepreload" href="/_app/start-d5efa906.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-6f232e4c.js">
+		<link rel="modulepreload" href="/_app/layout.svelte-62544dd5.js">
+		<link rel="modulepreload" href="/_app/pages/index.svelte-3b3f0169.js">
+		<link rel="modulepreload" href="/_app/chunks/index-16abc189.js">
 		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
 		<link rel="stylesheet" href="/_app/assets/pages/index.svelte-6a1a77e5.css">
 
 		<script type="module">
-			import { start } from "/_app/start-db54a4c1.js";
+			import { start } from "/_app/start-d5efa906.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":""},
@@ -29,8 +30,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/layout.svelte-eb479a5e.js"),
-						import("/_app/pages/index.svelte-fb69c299.js")
+						import("/_app/layout.svelte-62544dd5.js"),
+						import("/_app/pages/index.svelte-3b3f0169.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -41,6 +42,11 @@
 				}
 			});
 		</script>
+		<style>
+			body {
+				margin: 0;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="svelte">
