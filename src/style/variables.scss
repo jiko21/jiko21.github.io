@@ -2,14 +2,10 @@ $primary-color: #D81E5B;
 $text-black: #303030;
 $link: #D81E5B;
 $theme-black: #332C23;
-$background: #E8F7EE;
 $text-light: #E8F7EE;
 
 .card {
   border-radius: 10px;
-  background: $background;
-  box-shadow: 5px 5px 10px hsl(225, 4%, 79%), -5px -5px 10px $background;
-  padding: 20px;
 }
 
 * {

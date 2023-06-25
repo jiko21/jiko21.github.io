@@ -10,10 +10,10 @@
 		<div
 			style={`background-image: url(/${img})`}
 			alt={`${img}`}
-			class="card content div-img"
+			class="card div-img"
 		></div>
 	{:else}
-		<div class="card content div-img no-picture">
+		<div class="card div-img no-picture">
 			<p>NO PICTURE</p>
 		</div>
 	{/if}
@@ -25,28 +25,29 @@
 </div>
 
 <style lang="scss">
-  $radius-size: 10px;
 
   .image-card {
-    height: 400px;
+	border: #dedede solid 1px;
+	border-radius: 0.5rem;
+	box-shadow: 0 3px 1px #dedede;
     h2 {
       margin: 0;
     }
     img {
-      height: 100%;
+      height: 200px;
       width: 100%;
     }
     .content {
-      border-radius: $radius-size;
+      border-radius: 0.5rem;
       background-size: cover;
-      padding: 0 5%;
+      margin: 1rem;
       h3 {
         text-align: center;
       }
     }
     .div-img {
-      height: 50%;
-    }
+      height: 200px;
+	}
   }
 
   .no-picture {

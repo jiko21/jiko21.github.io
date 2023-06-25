@@ -7,8 +7,8 @@
 	</a>
 <style lang="scss">
   img {
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
     @media screen and (max-width: 1200px) {
       width: 32px;
       height: 32px;

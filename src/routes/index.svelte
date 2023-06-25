@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import HeadImage from '../components/HeadImage.svelte';
 	import ContentBlock from '../components/ContentBlock.svelte';
 	import ImageLink from '../components/ImageLink.svelte';
@@ -6,20 +6,20 @@
 	import MyFooter from '../components/MyFooter.svelte';
 	import { items } from '../contents';
 	import 'modern-css-reset';
+	import Profile from "../components/Profile.svelte";
+
+	let y;
 </script>
 <svelte:head>
 	<title>jiko21.me</title>
 	<meta name="description" content="jiko21's homepage">
 </svelte:head>
-<div class='container'>
+<svelte:window bind:scrollY={y}/>
+
+<div class='container' style="transform: translateY({Math.min(y, 800)}px)">
 	<HeadImage />
 	<div class='wrap'>
-		<ContentBlock title={items['about'].title}>
-			<div class='card text-image'>
-				<p>{@html items['about'].detail}</p>
-				<img src='/me.jpg' alt='jiko21-header' height='100%'/>
-			</div>
-		</ContentBlock>
+		<Profile title={items['about'].title} detail={items['about'].detail} />
 		<ContentBlock title={items['profile'].title}>
 			<ul class='card'>
 				{#each items['profile'].detail as item, i (i)}
@@ -92,7 +92,7 @@
 <style lang='scss'>
   * {
     margin: 0;
-    background-color: $background;
+		line-height: 1.8rem;
   }
 
   .container {
@@ -109,23 +109,6 @@
       @media screen and (max-width: 1200px) {
         padding: 0 20px;
       }
-    }
-  }
-
-  .text-image {
-    display: flex;
-    align-items: center;
-
-    img {
-      margin-left: auto;
-      max-width: 200px;
-      width: 40%;
-    }
-
-    p {
-      float: left;
-      width: 60%;
-      vertical-align: center;
     }
   }
 
@@ -154,6 +137,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 4px;
+		gap: 32px;
   }
 
   .works {
@@ -169,4 +153,8 @@
       }
     }
   }
+
+	li {
+		margin: 0.5rem 0;
+	}
 </style>

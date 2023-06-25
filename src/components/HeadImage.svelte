@@ -1,11 +1,15 @@
+<script lang="ts">
+  let y;
+</script>
 <div class="head-img">
 	<img src="/me_head.jpg" alt='jiko21_jumbo' />
 	<div>
-		<p>
+		<p style="opacity: {Math.min(y / 500, 1)}">
 			@jiko21 (a.k.a Daiki Kojima)
 		</p>
 	</div>
 </div>
+<svelte:window bind:scrollY={y}/>
 
 <style lang="scss">
   .head-img {
