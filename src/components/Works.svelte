@@ -7,8 +7,7 @@
 
   let pararax;
 
-
-  function onScroll() {
+  function fullScreenScroll() {
     const children = Array.from(pararax.children) as HTMLDivElement[];
     const top = pararax.getBoundingClientRect().top;
     if (top < window.innerHeight) {
@@ -24,6 +23,31 @@
         item.style.transform =`translateY(${200 * (i + 1.5)}px)`;
         item.style.opacity = '0';
       })
+    }
+  }
+  function smallScreenScroll() {
+    const children = Array.from(pararax.children) as HTMLDivElement[];
+    children.forEach((item) => {
+      const top = item.getBoundingClientRect().top;
+      if (top < window.innerHeight) {
+        const val = 200 * Math.max((top - 200) / (window.innerHeight - 200), 0);
+        item.style.transform =`translateY(${val * (1.5)}px)`
+
+        const opac = Math.sqrt(Math.max((top - 200) / (window.innerHeight - 200), 0));
+        item.style.opacity =`${1 - opac}`
+      } else {
+        item.style.transform =`translateY(${200 * 1.5}px)`;
+        item.style.opacity = '0';
+      }
+    });
+  }
+
+
+  function onScroll() {
+    if (window.innerWidth >= 1200) {
+      fullScreenScroll();
+    } else {
+      smallScreenScroll();
     }
   }
 
@@ -52,8 +76,11 @@
 	}
 
   .works > div {
-    width: calc(100% / 3 - 8px);
     margin: 4px;
+    transition-delay: 0s;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+    width: calc(100% / 3 - 8px);
     @media screen and (max-width: 1200px) {
       width: 100%;
       margin: 4px 0;

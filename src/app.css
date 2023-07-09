@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-accent: 228 87 46;
+  }
+}
+
+a {
+  color: rgb(var(--color-accent));
+}

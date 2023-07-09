@@ -9,6 +9,7 @@
 
 <style lang="scss">
 	img {
+		@apply hover:scale-125;
 		width: 48px;
 		height: 48px;
 		@media screen and (max-width: 1200px) {
