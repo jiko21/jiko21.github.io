@@ -5,13 +5,13 @@
 </footer>
 
 <style lang="scss">
-  footer {
-    width: 100%;
-    background-color: $theme-black;
-    color: $text-light;
-    padding: 10px 0;
-    p {
-      margin: 0;
-    }
-  }
+	footer {
+		width: 100%;
+		background-color: #332c23;
+		color: #e8f7ee;
+		padding: 10px 0;
+		p {
+			margin: 0;
+		}
+	}
 </style>
