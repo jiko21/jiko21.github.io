@@ -18,7 +18,7 @@
 	<meta name="description" content="jiko21's homepage" />
 </svelte:head>
 <svelte:window bind:scrollY={y} />
-<div class="page-container" style="transform: translateY({Math.min(y, 800)}px)">
+<div class="page-container" style="transform: translateY({Math.min(y, 1200)}px)">
 	<HeadImage />
 	<div class="wrap">
 		<About title={items['about'].title} detail={items['about'].detail} />
